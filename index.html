@@ -21,25 +21,23 @@ body {
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 
-    /* TELJES háttér */
     background: radial-gradient(circle at top, #163d6b 0%, #071c34 70%);
     color: #ffffff;
 }
 
-/* Stay Tuned */
-h1 {
-    font-size: 22px;
+/* szövegek */
+h1, h2 {
+    font-size: 24px;
     font-weight: 300;
     letter-spacing: 1px;
     margin: 0;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
-/* Skypack is coming */
+/* kis térköz köztük */
 h2 {
-    font-size: 38px;
-    font-weight: 600;
-    margin: 6px 0 30px 0;
+    margin-top: 6px;
+    margin-bottom: 28px;
 }
 
 /* kép */
@@ -58,10 +56,8 @@ h2 {
     100% { transform: translateY(0); }
 }
 
-/* mobil finomhangolás */
 @media (max-width: 480px) {
-    h1 { font-size: 20px; }
-    h2 { font-size: 34px; }
+    h1, h2 { font-size: 22px; }
 }
 </style>
 </head>
