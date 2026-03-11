@@ -3,68 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Skypack</title>
 
 <style>
-
-body{
-margin:0;
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-font-family:Arial, Helvetica, sans-serif;
-text-align:center;
-
-/* kék háttér */
-background: radial-gradient(circle at top,#163d6b,#071c34);
-
-color:white;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
-h1{
-font-size:60px;
-margin-bottom:10px;
-letter-spacing:2px;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
+    /* TELJES háttér */
+    background: radial-gradient(circle at top, #163d6b 0%, #071c34 70%);
+    color: #ffffff;
 }
 
-p{
-font-size:24px;
-margin-bottom:40px;
-opacity:0.9;
+/* Stay Tuned */
+h1 {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* Skypack is coming */
+h2 {
+    font-size: 38px;
+    font-weight: 600;
+    margin: 6px 0 30px 0;
 }
 
 /* kép */
-.hero-img{
-max-width:90%;
-max-height:65vh;
-border-radius:16px;
-
-/* glow effekt */
-box-shadow:0 30px 80px rgba(0,0,0,0.6);
-
-/* kis animáció */
-animation:float 6s ease-in-out infinite;
+.hero-img {
+    max-width: 92%;
+    max-height: 65vh;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+    animation: float 6s ease-in-out infinite;
 }
 
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0px);}
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-14px); }
+    100% { transform: translateY(0); }
 }
 
+/* mobil finomhangolás */
+@media (max-width: 480px) {
+    h1 { font-size: 20px; }
+    h2 { font-size: 34px; }
+}
 </style>
-
 </head>
 
 <body>
 
 <h1>Stay Tuned</h1>
-<p>Skypack is coming 🚀</p>
+<h2>Skypack is coming 🚀</h2>
 
-<img class="hero-img" src="IMG_1317.jpeg">
+<img class="hero-img" src="IMG_1317.jpeg" alt="Skypack">
 
 </body>
 </html>
