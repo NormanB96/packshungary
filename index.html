@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- Mobil full screen / zoom OK -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#071c34">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -15,6 +14,7 @@
     box-sizing: border-box;
 }
 
+/* alap */
 html, body {
     margin: 0;
     padding: 0;
@@ -35,17 +35,17 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     color: #ffffff;
 
+    /* FONT ÉLESSÉG */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+
     background: radial-gradient(circle at top, #163d6b 0%, #071c34 75%);
-    overflow-x: hidden;
 }
 
-/* FELSO SZOVEG – zoom-barát */
+/* SZÖVEG – SEMMI ANIMÁCIÓ */
 .header {
     margin-top: 5svh;
     text-align: center;
-
-    opacity: 0;
-    animation: fadeText 1s ease forwards;
 }
 
 .header h1,
@@ -60,7 +60,7 @@ body {
     margin-top: 6px;
 }
 
-/* KEP BLOKK */
+/* KÉP */
 .hero {
     flex: 1;
     display: flex;
@@ -72,29 +72,27 @@ body {
 .hero-img {
     max-width: 92%;
     max-height: 65svh;
+    height: auto;
+
     border-radius: 16px;
     box-shadow: 0 30px 80px rgba(0,0,0,0.55);
 
+    /* CSAK A KÉP ANIMÁLÓDIK */
     animation: float 6s ease-in-out infinite;
 }
 
-/* ANIMACIOK */
-@keyframes fadeText {
-    to { opacity: 1; }
-}
-
+/* lebegés */
 @keyframes float {
     0%   { transform: translateY(0); }
-    50%  { transform: translateY(-14px); }
+    50%  { transform: translateY(-12px); }
     100% { transform: translateY(0); }
 }
 
-/* LANDSCAPE */
+/* landscape */
 @media (orientation: landscape) {
     .header {
         margin-top: 3svh;
     }
-
     .hero-img {
         max-height: 55svh;
     }
